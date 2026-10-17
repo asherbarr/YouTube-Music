@@ -107,11 +107,6 @@ if (gotSingleInstanceLock) {
 
     initDiscordRPC(config.discordClientId);
     createWindow();
-
-    app.on("activate", () => {
-      if (BrowserWindow.getAllWindows().length === 0) createWindow();
-      else mainWindow.show();
-    });
   });
 
   app.on("before-quit", () => {
@@ -120,7 +115,7 @@ if (gotSingleInstanceLock) {
   });
 
   // The window is hidden, not destroyed, on close (see createWindow), so the app
-  // stays alive in the tray on every platform including Linux/Windows.
+  // stays alive in the tray.
   app.on("window-all-closed", () => {});
 
   ipcMain.on("player-state-update", (_event, state) => {

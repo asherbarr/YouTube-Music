@@ -6,8 +6,7 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
-    "dist:linux": "electron-builder --linux",
-    "dist:win": "electron-builder --win"
+    "dist:linux": "electron-builder --linux"
   },
   "devDependencies": {
     "electron": "^43.4.0",
@@ -33,17 +32,6 @@
       ],
       "icon": "build/icon-ytm-v2.png",
       "category": "AudioVideo"
-    },
-    "win": {
-      "target": [
-        "nsis",
-        "zip"
-      ],
-      "icon": "build/icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
     }
   }
 }
