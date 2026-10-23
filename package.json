@@ -6,11 +6,13 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
-    "dist:linux": "electron-builder --linux"
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win"
   },
   "devDependencies": {
     "electron": "^43.4.0",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
     "@ghostery/adblocker-electron": "^2.18.2",
